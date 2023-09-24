@@ -1,0 +1,107 @@
+.main {
+    position: absolute;
+    top:750px; 
+    left:5vw;
+    /* border:1px solid black; */
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-card {
+  margin:20px;
+    width: 20vw;
+    height: 450px;
+    padding: .8em;
+    background: #ffffff;
+    position: relative;
+    overflow: visible;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  .product-card:hover {
+    box-shadow: 0 0 10px rgba(226, 196, 63, 0.8);
+  }
+
+  
+  
+  .product-card-img img {
+    background-color: #ffcaa6;
+    height: 200px;
+    width: 19vw;
+    border-radius: .5rem;
+    transition: .3s ease;
+    transition-duration: 1s;
+  }
+  
+  .product-card-info {
+    padding-top: 10%;
+  }
+  
+  .product-card-svg-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .product-card-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+  }
+  
+  /* Text */
+  .product-card-title {
+    font-weight: 900;
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+  
+  .product-card-description {
+    font-size: .9em;
+    padding-bottom: 10px;
+  }
+  
+  /* Button */
+  .product-card-button {
+    border: 1px solid #252525;
+    display: flex;
+    padding: .3em;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: .3s ease-in-out;
+    background-color: rgb(37, 199, 34);
+
+    color:white;
+  }
+  
+  /* Hover */
+  .product-card-img:hover {
+    transform: translateY(-5%);
+    box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+  }
+  
+  .product-card-button:hover {
+    border: 1px solid #ffcaa6;
+    background-color: #ffcaa6;
+  }
+
+  .marquee-container {
+    margin-left:5vw;
+    width: 90vw;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #5e5b5b;
+    color:white;
+}
+
+.marquee-content {
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+

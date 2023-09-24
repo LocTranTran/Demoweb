@@ -1,0 +1,16 @@
+/* Reset default margin and padding */
+body, h1, ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Root styles */
+  :root {
+    --primary-color: #ffffff; /* Màu xanh nhẹ cho nền */
+    --text-color: #333;
+  }
+  
+  /* Các phần CSS khác */
+  body{
+    overflow: visible;
+  }

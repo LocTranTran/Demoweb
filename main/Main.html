@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-...your-integrity-hash..."
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./cart.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="../main/Main.html"><div class="logo">Olayso</div></a>
+        <div class="search">
+          <input type="text" class="search-input" placeholder="Tìm kiếm" list="suggestions" />
+          <datalist id="suggestions">
+            <option value="Kem dưỡng da">
+              <!-- Thêm các gợi ý khác vào đây -->
+          </datalist>
+          <button class="search-button"><i class="fas fa-search fa-xl"></i></button>
+        </div>
+        <div class="user">
+          <div class="account">
+            <a href="../Login/login.html" class="account-link">Đăng ký / Đăng nhập</a>
+          </div>
+
+          <!-- GIỎ HÀNG  -->
+          <div class="cart">
+            <span class="cart-count">0</span>
+            <button class="btn-cart"style="border:none; "  onclick="showCart()"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+
+          <!-- GIỎ HÀNG  -->
+          <div class="user-avatar">
+            <i class="fas fa-user"></i>
+            <i class="fas fa-chevron-down fa-x"></i>
+            <div class="user-menu">
+              <ul>
+                <li><a href="#">Thông tin</a></li><hr>
+                <li><a href="#">Đăng xuất</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GIỎ hàng -->
+      <div id="cartContainer">
+        <h2 style="display:flex;justify-content: center;align-items: center;">Giỏ hàng</h2>
+        <button onclick="hideCart()" class="close-button">Close</button>
+        <button onclick="checkout()" class="checkout-button">Thanh toán </button>
+        <div id="cartItems">
+          <!-- Hiển thị danh sách sản phẩm trong giỏ hàng -->
+          <div class="empty-cart-message" style="display: block">
+            <img style="position: absolute;top:50%;left:50%;transform: translate(-50%,-50%);" src="../img/empty-cart.webp" alt=""></div>
+        </div>
+      </div>
+      
+      <div id="notification"></div>
+    </header>
+    <nav class="navigation">
+      <ul class="nav-links">
+        <li><a href="./Main.html">Trang chủ</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="#">Sản phẩm/Dịch vụ</a></li>
+        <li><a href="#">Khuyến mại</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="#">Hỏi đáp</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </nav>
+    <div style="display: flex;width: 90vw ;height:500px;margin-left: 5vw">
+      <div class="category">
+        <ul class="category-link">
+          <li><a href="#">Kem dưỡng da </a></li>
+          <li><a href="#">Sữa rửa mặt</a></li>
+          <li><a href="#">Tinh chất</a></li>
+          <li><a href="#">Mặt nạ</a></li>
+          <li><a href="#">Kem chống nắng</a></li>
+          <li><a href="#">Kem giữ ẩm </a></li>
+          <li><a href="#">Chống lão hóa</a></li>
+          <li><a href="#">Sản phẩn khác...</a></li>
+        </ul>
+      </div>
+      <div class="slideshow" style="background-image: url('../img/bglg.jpg');">
+        <img src="../img/z4687556421027_8eaab47dccae2c718e0292eea848b052.jpg" alt="">
+        <img src="../img/lotion-trang-min-olay-b3-vitamin-e-250ml.webp" alt="">
+        <img src="../img/z4687556445064_80e2c2396cc4768f102f8d152bd2b814.jpg" alt="">
+      </div>
+      
+    </div>
+
+    <div class="marquee-container">
+      <div class="marquee-content">
+        Olay - Mang lại cho bạn làn da tươi trẻ và rạng rỡ. Khám phá các sản phẩm chăm sóc da chất lượng cao của chúng tôi, chứa thành phần tự nhiên và công nghệ tiên tiến. Hãy trải nghiệm sự thay đổi đáng kinh ngạc trên làn da của bạn với Olay!      </div>
+  </div>
+
+    <p style="font-size:2rem;margin:30px 0 0 5vw ">Sản phẩm bán chạy nhất</p>
+    <main class="main">
+      <!-- Nội dung chính của trang web -->
+      <div class="product-card">
+        <div class="product-card-img">
+          <img src="../img/1.jpg" alt="">
+        </div>
+        <div class="product-card-info">
+          <p class="product-card-title">Kem dưỡng ẩm mặt Vitamin C + Peptide 24</p>
+          <p class="product-card-description">Mang lại làn da sáng hơn gấp 2 lần sau 28 ngày</p>
+        </div>
+        <div class="product-card-footer">
+          <span class="product-card-price">$29.99</span>
+          <button onclick="increaseQuantity();addToCart()" class="product-card-button"> Thêm Vào Giỏ Hàng
+            <svg class="product-card-svg-icon" viewBox="0 0 20 20">
+              <path d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z"></path>
+              <path d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z"></path>
+              <path d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>  
+      <div class="product-card">
+        <div class="product-card-img">
+          <img src="../img/3.jpg" alt="">
+        </div>
+        <div class="product-card-info">
+          <p class="product-card-title">Kem dưỡng ẩm Regenerist Micro-Sculpting</p>
+          <p class="product-card-description">Giảm nếp nhăn và đường nhăn bắt đầu từ ngày 1</p>
+        </div>
+        <div class="product-card-footer">
+          <span class="product-card-price">$29.99</span>
+          <button onclick="increaseQuantity();addToCart()" class="product-card-button"> Thêm Vào Giỏ Hàng
+            <svg class="product-card-svg-icon" viewBox="0 0 20 20">
+              <path d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z"></path>
+              <path d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z"></path>
+              <path d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card-img">
+          <img src="../img/4.jpg" alt="">
+        </div>
+        <div class="product-card-info">
+          <p class="product-card-title">
+            Retinol24 + Kem dưỡng ẩm mặt ban đêm Peptide</p>
+          <p class="product-card-description">Thức dậy với làn da mịn màng hơn, sáng hơn</p>
+        </div>
+        <div class="product-card-footer">
+          <span class="product-card-price">$29.99</span>
+          <button onclick="increaseQuantity();addToCart()" class="product-card-button"> Thêm Vào Giỏ Hàng
+            <svg class="product-card-svg-icon" viewBox="0 0 20 20">
+              <path d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z"></path>
+              <path d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z"></path>
+              <path d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card-img">
+          <img src="../img/2.jpg" alt="">
+        </div>
+        <div class="product-card-info">
+          <p class="product-card-title">Mặt nạ dưỡng ẩm sâu</p><br>
+          <p class="product-card-description">Nhận đủ nước lâu dài trong khi bạn ngủ</p>
+        </div>
+        <div class="product-card-footer">
+          <span class="product-card-price">$29.99</span>
+          <button onclick="increaseQuantity();addToCart()" class="product-card-button"> Thêm Vào Giỏ Hàng
+            <svg class="product-card-svg-icon" viewBox="0 0 20 20">
+              <path d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z"></path>
+              <path d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z"></path>
+              <path d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./header.js"></script>
+  <script src="./main.js"> </script>
+  <script src="./cart.js"></script>
+  <script src="../Login/login.js"></script>
+</html>
