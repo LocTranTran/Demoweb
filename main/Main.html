@@ -25,7 +25,7 @@
         </div>
         <div class="user">
           <div class="account">
-            <a href="../Login/login.html" class="account-link">Đăng ký / Đăng nhập</a>
+            <a href="../Login/login.html" class="account-link"> Đăng nhập</a>
           </div>
 
           <!-- GIỎ HÀNG  -->
@@ -41,6 +41,7 @@
             <div class="user-menu">
               <ul>
                 <li><a href="#">Thông tin</a></li><hr>
+                <a href="../Login/login.html" class="account-link"> Đăng nhập</a><hr>
                 <li><a href="#">Đăng xuất</a></li>
               </ul>
             </div>
@@ -99,7 +100,7 @@
         Olay - Mang lại cho bạn làn da tươi trẻ và rạng rỡ. Khám phá các sản phẩm chăm sóc da chất lượng cao của chúng tôi, chứa thành phần tự nhiên và công nghệ tiên tiến. Hãy trải nghiệm sự thay đổi đáng kinh ngạc trên làn da của bạn với Olay!      </div>
   </div>
 
-    <p style="font-size:2rem;margin:30px 0 0 5vw ">Sản phẩm bán chạy nhất</p>
+    <div style="font-size:2rem;margin:30px 0 0 5vw ;display:flex"><h1>Sản phẩm bán chạy nhất &nbsp; </h1><h1 id="countdown" style="background-color: aqua;width:500px;height:60px;color:red"></h1></div>
     <main class="main">
       <!-- Nội dung chính của trang web -->
       <div class="product-card">
@@ -179,10 +180,85 @@
           </button>
         </div>
       </div>
+
+      <div class="info">
+        <h1>Thành phần </h1>
+        <div class="vitamin">
+          <div class="card">
+            <div class="content">
+              <div class="back">
+                <div class="back-content">
+                  <strong>c</strong>
+                </div>
+              </div>
+              <div class="front">
+                
+                <div class="img">
+                  <div class="circle">
+                  </div>
+                  <div class="circle" id="right">
+                  </div>
+                  <div class="circle" id="bottom">
+                  </div>
+                </div>
+          
+                <div class="front-content">
+                  <small class="badge">Pasta</small>
+                  <div class="description">
+                    <div class="title">
+                      <p class="title">
+                        <strong>Spaguetti Bolognese</strong>
+                      </p>
+                      <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>
+                    </div>
+                    <p class="card-footer">
+                      30 Mins &nbsp; | &nbsp; 1 Serving
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
+
+    <footer>
+
+    </footer>
   </body>
   <script src="./header.js"></script>
   <script src="./main.js"> </script>
   <script src="./cart.js"></script>
   <script src="../Login/login.js"></script>
+  <script>
+    function countdown() {
+      var endDate = new Date(); // Lấy thời gian hiện tại
+      endDate.setDate(endDate.getDate() + 7); // Cộng thêm 7 ngày
+      
+      var countdownElement = document.getElementById('countdown');
+      
+      var countdownInterval = setInterval(function() {
+        var now = new Date(); // Lấy thời gian hiện tại
+        var timeDiff = endDate.getTime() - now.getTime(); // Tính thời gian còn lại
+        
+        // Chuyển đổi thời gian còn lại thành đơn vị ngày, giờ, phút, giây
+        var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+        
+        // Hiển thị thời gian còn lại lên giao diện
+        countdownElement.textContent = hours + " giờ, " + minutes + " phút, " + seconds + " giây";
+        
+        if (timeDiff < 0) {
+          clearInterval(countdownInterval);
+          countdownElement.textContent = "Đếm ngược đã kết thúc!";
+        }
+      }, 1000);
+    }
+    
+    // Gọi hàm countdown khi trang HTML được tải hoàn toàn
+    document.addEventListener('DOMContentLoaded', countdown);
+  </script>
 </html>
