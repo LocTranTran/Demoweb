@@ -1,0 +1,112 @@
+.Main{
+    width: 100%;
+    border: 1px solid black;
+    height: 600px;
+    background: black;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+.Main .soye{
+    width: 90vw;
+    height: 370px;
+    display: flex;
+}
+.Main .text1{
+    width: 400px;
+    padding-left: 60px;
+    color: #fff;
+
+}
+.Main .text2{
+    height: 370px;
+    width: 980px;
+    display: flex;
+    padding-left: 100px;
+    color: #b7acb3;
+
+}
+.Main button{
+    width: 320px;
+    height: 60px;
+    color: black;
+    background: #fff;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.Main .text1 h1{
+    font-size: 60px;
+    
+}
+.Main .text1 h2{
+    font-size: 40px;
+    margin-top: -20px;
+}
+.Main .text1 h3{
+    font-size: 22px;
+    margin-top: -20px;
+}
+.Main .text2 .yeye1{
+    margin-right: 20px;
+    margin-top: 100px;
+}
+.Main .text2 .yeye1 li{
+    list-style: none;
+}
+.Main .text2 .yeye1 li a{
+    text-decoration: none;
+    color: #fff;
+}
+/* yeyeeeeeeeeeeeeeee1 */
+.Main .text2 .yeye2{
+    margin-right: 20px;
+    margin-top: 100px;
+}
+.Main .text2 .yeye2 li{
+    list-style: none;
+}
+.Main .text2 .yeye2 li a{
+    text-decoration: none;
+    color: #fff;
+}
+/* yeyeeeeeeeeeeeeeee2 */
+.Main .text2 .yeye3{
+    margin-right: 20px;
+    margin-top: 100px;
+}
+.Main .text2 .yeye3 li{
+    list-style: none;
+}
+.Main .text2 .yeye3 li a{
+    text-decoration: none;
+    color: #fff;
+
+}
+/* yeyeeeeeeeeeeeeeee3 */
+
+
+
+.Main .oye{
+    height: 212px;
+    /* border: 1px solid black; */
+    /* background: gray; */
+    padding-left: 50px;
+    color: #b7acb3;
+
+}
+.Main .oye .imgheader{
+    /* background: rebeccapurple; */
+    height: 30px;
+}
+.Main .oye .imgheader img{
+    margin-left: 5px;
+    margin-bottom: -10px;
+}
+.Main .oye .imgheader a{
+    margin-left: 20px;
+    color: #fff;
+    margin-top: -10px;
+}
+.Main .oye h4{
+    color: #fff;
+    margin-left: 5px;
+}
