@@ -161,7 +161,12 @@ z-index: 10000;}
 }
 
 .btn-cart:hover{
-  background-color: #cac6c6;
+  background-color: #FF6DB4;
+  border-radius: 2px;
+  color:#ebe8e8
+}
+.btn-cart{
+  background-color: #FF6DB4;
   border-radius: 2px;
 }
 
@@ -190,8 +195,12 @@ z-index: 10000;}
   height: 100px;
   align-items: center;
   gap: 50px;
+  
 }
+.user-avatar:hover {
+  color:#ebe8e8
 
+}
 .user-avatar .user-menu {
    z-index: 5;
     width: 100px;
@@ -226,7 +235,7 @@ z-index: 10000;}
     text-decoration: none;
   }
 
-.user-avatar .fa-chevron-down {
+.user-avatar .fa-chevron-up {
   position: absolute;
   top: 50%;
   right: -10px;
@@ -234,11 +243,11 @@ z-index: 10000;}
   transition: transform 0.3s ease;
 }
 
-.user-avatar.active .fa-chevron-down {
+.user-avatar.active .fa-chevron-up {
   transform: translateY(-50%) rotate(180deg);
 }
 
-.user-avatar:hover .user-menu {
+.user-avatar:active .user-menu {
   display: block;
 }
 /* Các phần CSS khác */

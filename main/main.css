@@ -62,7 +62,9 @@ body{
 .Category{
   background-color: white;
   border-radius: 4px;
- 
+  
+  height: 99%;
+  /* height: 116.5vh; */
 }
 .Category-item--active .Category-item__link::before{
   top:15px;
@@ -338,7 +340,7 @@ top: -1px;
 }
 
 .marquee-content {
-    animation: marquee 10s linear infinite;
+    animation: marquee 20s linear infinite;
 }
 
 @keyframes marquee {

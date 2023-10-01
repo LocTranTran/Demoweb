@@ -5,11 +5,14 @@
     background: black;
     padding-left: 50px;
     padding-top: 30px;
+    width: 90vw;
+margin-left: 5vw;
 }
 .Main .soye{
     width: 90vw;
     height: 370px;
     display: flex;
+    justify-content: center;
 }
 .Main .text1{
     width: 400px;
