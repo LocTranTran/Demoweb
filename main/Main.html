@@ -6,8 +6,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       integrity="sha512-...your-integrity-hash..."
     />
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./item.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- ----------------- -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <link rel="stylesheet" href="./styles.css" />
@@ -104,6 +102,9 @@
       <div class="marquee-content">
         Olay - Mang lại cho bạn làn da tươi trẻ và rạng rỡ. Khám phá các sản phẩm chăm sóc da chất lượng cao của chúng tôi, chứa thành phần tự nhiên và công nghệ tiên tiến. Hãy trải nghiệm sự thay đổi đáng kinh ngạc trên làn da của bạn với Olay!      </div>
   </div>
+  <!-- GIỎ HÀNG  -->
+  <div id="notification"></div>
+  <!-- GIỎ HÀNG  -->
 
     <div style="font-size:2rem;margin:30px 0 0 5vw ;display:flex ; text-align: center;width:90vw;justify-content: space-evenly; background-color: #ec4b4b;color:#fff"><h2>  Flash sale </h2><h2>Kết thúc trong </h2><h2 id="countdown" style="color:white"></h2></div>
     <main class="main">
@@ -167,7 +168,8 @@
                             <div class="grid__column-2-4">
                               <!-- phần sản phẩm item card -->
                                         <a class="home-product-item">
-                                            <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lm2p43f00au7e0_tn);">
+                                            <div class="home-product-item__img" style="background-image: url();">
+                                              <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lm2p43f00au7e0_tn" alt="">
                                                       <h4 class="home-product-item__name">Kem Dưỡng Ẩm Ban Đêm Căng Mướt, Sáng Khỏe & Ngừa Lão Hóa OLAY REGENERIST 50G</h4>
                                                 <div class="home-product-item__price">
                                                       <span class="home-product-item__price-old">499.000đ</span>
@@ -189,7 +191,7 @@
                                                             <span class="home-product-item__sold">Đã bán 4.5k</span>
                                                     </div>
                                                     <div class="home-product-item__list-select"> 
-                                                      <button onclick="" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
+                                                      <button onclick="increaseQuantity();addToCart()" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
                                                       <button type="button" class="btn btn-danger" style="font-size: .6rem;">Mua ngay+</button>
                                                     </div> 
                                                     
@@ -210,16 +212,13 @@
                                                       </div>
                                             </div>
                                         </a>
-                                        
-      
-                            
-      
                             </div>
                             <!-- Items 1 -->
                             <div class="grid__column-2-4">
                               <!-- phần sản phẩm item card -->
                                         <a class="home-product-item">
-                                            <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lhnncu6m0mth90);">
+                                            <div class="home-product-item__img" style="background-image: url();">
+                                              <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lhnncu6m0mth90" alt="">
                                                       <h4 class="home-product-item__name">Sữa Dưỡng Thể Trắng Da OLAY Vitamin B3+ Retinol/Vitamin C Olay Bright Ultra Whitening</h4>
                                                 <div class="home-product-item__price">
                                                       <span class="home-product-item__price-old">₫150.000 </span>
@@ -241,7 +240,7 @@
                                                             <span class="home-product-item__sold">18,5k Đã Bán</span>
                                                     </div>
                                                     <div class="home-product-item__list-select"> 
-                                                      <button onclick="" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
+                                                      <button onclick="increaseQuantity();addToCart()" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
                                                       <button type="button" class="btn btn-danger" style="font-size: .6rem;">Mua ngay+</button>
                                                     </div> 
                                                     
@@ -268,7 +267,8 @@
                             <div class="grid__column-2-4">
                               <!-- phần sản phẩm item card -->
                                         <a class="home-product-item">
-                                            <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lm2w1hud7g0v62);">
+                                            <div class="home-product-item__img" style="background-image: url();">
+                                              <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lm2w1hud7g0v62" alt="">
                                                       <h4 class="home-product-item__name">Sữa Tắm OLAY B3+ Vtamin C Siêu Dưỡng Trắng Da, Cấp Ẩm Và Đàn Hồi Cho Da Chai 500ml Chính Hãng</h4>
                                                 <div class="home-product-item__price">
                                                       <span class="home-product-item__price-old">₫305.000</span>
@@ -290,7 +290,7 @@
                                                             <span class="home-product-item__sold">Đã bán 4.5k</span>
                                                     </div>
                                                     <div class="home-product-item__list-select"> 
-                                                      <button onclick="" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
+                                                      <button onclick="increaseQuantity();addToCart()" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
                                                       <button type="button" class="btn btn-danger" style="font-size: .6rem;">Mua ngay+</button>
                                                     </div> 
                                                     
@@ -320,7 +320,8 @@
                             <div class="grid__column-2-4">
                               <!-- phần sản phẩm item card -->
                                         <a class="home-product-item">
-                                            <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lm9ral3l2wgv25);">
+                                            <div class="home-product-item__img" style="background-image: url();">
+                                              <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lm9ral3l2wgv25" alt="" />
                                                       <h4 class="home-product-item__name">Kem Dưỡng Ban Đêm Phục Hồi & Ngăn Ngừa 7 Dấu Hiệu Lão Hóa OLAY TOTAL EFFECTS 50G</h4>
                                                 <div class="home-product-item__price">
                                                       <span class="home-product-item__price-old">₫329.000</span>
@@ -342,7 +343,7 @@
                                                             <span class="home-product-item__sold">Đã bán 4.5k</span>
                                                     </div>
                                                     <div class="home-product-item__list-select"> 
-                                                      <button onclick="" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
+                                                      <button onclick="increaseQuantity();addToCart()" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
                                                       <button type="button" class="btn btn-danger" style="font-size: .6rem;">Mua ngay+</button>
                                                     </div> 
                                                     
@@ -372,7 +373,8 @@
                             <div class="grid__column-2-4">
                               <!-- phần sản phẩm item card -->
                                         <a class="home-product-item">
-                                            <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lm9rgf51ilen62);">
+                                            <div class="home-product-item__img" style="background-image: url();">
+                                              <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lm9rgf51ilen62" alt="">
                                                       <h4 class="home-product-item__name">Kem Dưỡng Ẩm Ban Đêm Thúc Đẩy Tái Tạo Da & Mờ Nếp Nhăn OLAY REGENERIST Chiết Xuất RETINOL24 50G</h4>
                                                 <div class="home-product-item__price">
                                                       <span class="home-product-item__price-old">₫549.000</span>
@@ -394,7 +396,7 @@
                                                             <span class="home-product-item__sold">Đã bán 4.5k</span>
                                                     </div>
                                                     <div class="home-product-item__list-select"> 
-                                                      <button onclick="" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
+                                                      <button onclick="increaseQuantity();addToCart()" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
                                                       <button type="button" class="btn btn-danger" style="font-size: .6rem;">Mua ngay+</button>
                                                     </div> 
                                                     
@@ -424,7 +426,8 @@
                             <div class="grid__column-2-4">
                               <!-- phần sản phẩm item card -->
                                         <a class="home-product-item">
-                                            <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lm9ral3kxa73fd);">
+                                            <div class="home-product-item__img" style="background-image: url();">
+                                              <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lm9ral3kxa73fd" alt="">
                                                       <h4 class="home-product-item__name">Kem Dưỡng Ban Ngày Phục Hồi & Ngăn Ngừa 7 Dấu Hiệu Lão Hóa SPF 15 OLAY TOTAL EFFECTS 50G</h4>
                                                 <div class="home-product-item__price">
                                                       <span class="home-product-item__price-old">₫329.000
@@ -447,7 +450,7 @@
                                                             <span class="home-product-item__sold">Đã bán 4.5k</span>
                                                     </div>
                                                     <div class="home-product-item__list-select"> 
-                                                      <button onclick="" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
+                                                      <button onclick="increaseQuantity();addToCart()" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
                                                       <button type="button" class="btn btn-danger" style="font-size: .6rem;">Mua ngay+</button>
                                                     </div> 
                                                     
@@ -477,7 +480,8 @@
                             <div class="grid__column-2-4">
                               <!-- phần sản phẩm item card -->
                                         <a class="home-product-item">
-                                            <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-ljahn1337kr6af);">
+                                            <div class="home-product-item__img" style="background-image: url();">
+                                              <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-ljahn1337kr6af" alt="">
                                                       <h4 class="home-product-item__name">Sữa Dưỡng Thể Olay B3 Bright Ultra Whitening dưỡng trắng , dưỡng ẩm toàn thân , bản cải tiến mới nhất / Subeo Beauty</h4>
                                                 <div class="home-product-item__price">
                                                       <span class="home-product-item__price-old">₫145.000</span>
@@ -500,7 +504,7 @@
                                                               Đã Bán</span>
                                                     </div>
                                                     <div class="home-product-item__list-select"> 
-                                                      <button onclick="" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
+                                                      <button onclick="increaseQuantity();addToCart()" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
                                                       <button type="button" class="btn btn-danger" style="font-size: .6rem;">Mua ngay+</button>
                                                     </div> 
                                                     
@@ -530,7 +534,8 @@
                             <div class="grid__column-2-4">
                               <!-- phần sản phẩm item card -->
                                         <a class="home-product-item">
-                                            <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lkul035qy37k7c);">
+                                            <div class="home-product-item__img" style="background-image: url();">
+                                              <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lkul035qy37k7c" alt="">
                                                       <h4 class="home-product-item__name">[HÀNG THÁI LAN] Sữa Tắm Olay B3 Nội Địa Thái Retinol/Peptide/Vitamin C Dưỡng Ẩm Sáng, Trắng Da Chống Lão Hóa</h4>
                                                 <div class="home-product-item__price">
                                                       <span class="home-product-item__price-old">₫260.000
@@ -553,7 +558,7 @@
                                                             <span class="home-product-item__sold">Đã bán 4.5k</span>
                                                     </div>
                                                     <div class="home-product-item__list-select"> 
-                                                      <button onclick="" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
+                                                      <button onclick="increaseQuantity();addToCart()" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
                                                       <button type="button" class="btn btn-danger" style="font-size: .6rem;">Mua ngay+</button>
                                                     </div> 
                                                     

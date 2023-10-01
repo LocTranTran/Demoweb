@@ -11,7 +11,7 @@ body{
   width: 100%;
 }
 .grid{
-  width: 1200px;
+  width:90vw;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -152,6 +152,8 @@ font-size: 1.2rem;
 }
 /* CSS cho item card sp */
 .home-product-item {
+  flex:1;
+  min-width: 48%; 
   background-color: white;
   margin-top: 10px;
   position: relative;
@@ -164,6 +166,7 @@ font-size: 1.2rem;
   transition: transform;
   
 }
+
 .home-product-item:hover{
   transform: translateY(-1px);
   box-shadow: 0 1px 20px 0  rgba(0,0,0,.1) ;
@@ -182,10 +185,13 @@ font-size: 1.2rem;
   
 }
 .home-product-item__img{
-padding-top: 100%;
 background-repeat: no-repeat;
 background-size: contain;
 
+}
+.home-product-item__img img{
+  width:100%;
+  height:100%;
 }
 .home-product-item__price    {
 display: flex;
