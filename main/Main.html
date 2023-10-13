@@ -13,11 +13,12 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="./cart.css">
     <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="info.css">
   </head>
   <body>
     <header class="header " style="background-color: #FF6DB4;">
       <div class="container">
-        <a href="../main/Main.html"><div class="logo">Olayso</div></a>
+        <a href="../main/Main.html"><div class="logo">OLAY</div></a>
         <div class="search">
           <input type="text" class="search-input" placeholder="Tìm kiếm" list="suggestions" />
           <datalist id="suggestions">
@@ -185,11 +186,14 @@
                               <!-- Items 1 -->
                             <!-- Items 1 -->
                             <div class="grid__column-2-4">
-                              <!-- phần sản phẩm item card -->
-                                        <a class="home-product-item">
+                              
+                                        <a class="home-product-item" onclick="flipCard(this)">
+                                          <div class="product-front">
+                                            <!-- Nội dung mặt trước của card -->
                                             <div class="home-product-item__img" style="background-image: url();">
                                               <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lm2p43f00au7e0_tn" alt="">
-                                                      <h4 class="home-product-item__name">Kem Dưỡng Ẩm Ban Đêm Căng Mướt, Sáng Khỏe & Ngừa Lão Hóa OLAY REGENERIST 50G</h4>
+                                              <div class="titles">        
+                                              <h4 class="home-product-item__name">Kem Dưỡng Ẩm Ban Đêm Căng Mướt, Sáng Khỏe & Ngừa Lão Hóa OLAY REGENERIST 50G</h4>
                                                 <div class="home-product-item__price">
                                                       <span class="home-product-item__price-old">499.000đ</span>
                                                       <span class="home-product-item__price-new">335.000đ</span>
@@ -211,7 +215,7 @@
                                                     </div>
                                                     <div class="home-product-item__list-select"> 
                                                       <button onclick="increaseQuantity();addToCart()" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
-                                                      <button type="button" class="btn btn-danger" style="font-size: .6rem;">Mua ngay+</button>
+                                                      <button onclick="handleButtonClick(event)" type="button" class="btn btn-danger" style="font-size: .6rem;">Mua ngay+</button>
                                                     </div> 
                                                     
                                                     <!-- nguồn gốc -->
@@ -230,15 +234,58 @@
                                                             <span class="home-product-item__sale-off-label" >GIẢM</span>
                                                       </div>
                                             </div>
+                                          </div>
+                                          </div>
+                                          <div class="product-back">
+                                            <!-- Nội dung mặt sau của card -->
+                                            <div class="product-card">
+                                              <div class="product-image">
+                                                <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lm2p43f00au7e0_tn" alt="">
+                                                <h5 class="product-title">Kem Dưỡng OLAY Regenerist</h5>
+                                              </div>
+                                              <div class="product-info">
+                                                <p class="product-description">Kem dưỡng da chống lão hóa giúp giảm nếp nhăn, tăng cường đàn hồi và cung cấp độ ẩm sâu.</p>
+                                                <div class="product-details">
+                                                  <div class="product-section">
+                                                    <h6 class="product-section-heading">Thành phần:</h6>
+                                                    <ul class="product-ingredient-list">
+                                                      <li><em>Nước</em></li>
+                                                      <li><em>Glycerin</em></li>
+                                                      <li><em>Niacinamide</em></li>
+                                                      <li><em>Dimethicone</em></li>
+                                                      <li><em>Hyaluronic acid</em></li>
+                                                      <li><em>Peptides</em></li>
+                                                      <li><em>Chất chống oxy hóa</em></li>
+                                                    </ul>
+                                                  </div>
+                                                  <div class="product-section">
+                                                    <h6 class="product-section-heading">Công dụng:</h6>
+                                                    <ul class="product-benefit-list">
+                                                      <li><em>Giảm nếp nhăn</em></li>
+                                                      <li><em>Tăng cường đàn hồi</em></li>
+                                                      <li><em>Cung cấp độ ẩm</em></li>
+                                                    </ul>
+                                                  </div>
+                                                  <div class="product-section">
+                                                    <h6 class="product-section-heading">Phù hợp với loại da:</h6>
+                                                    <p class="product-skin-type">Phù hợp với mọi loại da</p>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
                                         </a>
                             </div>
                             <!-- Items 1 -->
                             <div class="grid__column-2-4">
-                              <!-- phần sản phẩm item card -->
-                                        <a class="home-product-item">
+                              
+                                        <a class="home-product-item"   onclick="flipCard(this)">
+                                          <div class="product-front">
+                                            <!-- Nội dung mặt trước của card -->                                            
                                             <div class="home-product-item__img" style="background-image: url();">
                                               <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lhnncu6m0mth90" alt="">
-                                                      <h4 class="home-product-item__name">Sữa Dưỡng Thể Trắng Da OLAY Vitamin B3+ Retinol/Vitamin C Olay Bright Ultra Whitening</h4>
+                                              <div class="titles">        
+                                              <h4 class="home-product-item__name">Sữa Dưỡng Thể Trắng Da OLAY Vitamin B3+ Retinol/Vitamin C Olay Bright Ultra Whitening</h4>
                                                 <div class="home-product-item__price">
                                                       <span class="home-product-item__price-old">₫150.000 </span>
                                                       <span class="home-product-item__price-new">₫92.000</span>
@@ -260,7 +307,7 @@
                                                     </div>
                                                     <div class="home-product-item__list-select"> 
                                                       <button onclick="increaseQuantity();addToCart()" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
-                                                      <button type="button" class="btn btn-danger" style="font-size: .6rem;">Mua ngay+</button>
+                                                      <button onclick="handleButtonClick(event)" type="button" class="btn btn-danger" style="font-size: .6rem;">Mua ngay+</button>
                                                     </div> 
                                                     
                                                     <!-- nguồn gốc -->
@@ -279,16 +326,55 @@
                                                             <span class="home-product-item__sale-off-label" >GIẢM</span>
                                                       </div>
                                             </div>
+                                            </div>
+
+                                          </div>
+                                          <div class="product-back">
+                                            <!-- Nội dung mặt sau của card -->
+                                            <div class="product-card">
+                                              <div class="product-image">
+                                                <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lhnncu6m0mth90" alt="">
+                                                <h5 class="product-title">Sữa Dưỡng Thể Trắng Da OLAY Vitamin B3</h5>
+                                              </div>
+                                              <div class="product-info">
+                                                <p class="product-description">Sữa dưỡng thể trắng da Olay</p>
+                                                <div class="product-details">
+                                                  <div class="product-section">
+                                                    <h6 class="product-section-heading">Thành phần:</h6>
+                                                    <ul class="product-ingredient-list">
+                                                      <li><em>Vitamin B3+</em></li>
+                                                      <li><em>Retinol</em></li>
+                                                      <li><em>Vitamin C</em></li>
+                                                    </ul>
+                                                  </div>
+                                                  <div class="product-section">
+                                                    <h6 class="product-section-heading">Công dụng:</h6>
+                                                    <ul class="product-benefit-list">
+                                                      <li><em>Làm sáng và đều màu da</em></li>
+                                                      <li><em>Cải thiện làn da sạm màu và tối màu</em></li>
+                                                    </ul>
+                                                  </div>
+                                                  <div class="product-section">
+                                                    <h6 class="product-section-heading">Phù hợp với loại da:</h6>
+                                                    <p class="product-skin-type">Phù hợp với mọi loại da</p>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            </div>
                                         </a>
                                         
                             </div>
                             <!-- Items 1 -->
                             <div class="grid__column-2-4">
-                              <!-- phần sản phẩm item card -->
-                                        <a class="home-product-item">
+                              
+                                        <a class="home-product-item" onclick="flipCard(this)">
+                                          <div class="product-front">
+                                            <!-- Nội dung mặt trước của card -->
                                             <div class="home-product-item__img" style="background-image: url();">
                                               <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lm2w1hud7g0v62" alt="">
-                                                      <h4 class="home-product-item__name">Sữa Tắm OLAY B3+ Vtamin C Siêu Dưỡng Trắng Da, Cấp Ẩm Và Đàn Hồi Cho Da Chai 500ml Chính Hãng</h4>
+                                              <div class="titles">        
+                                              <h4 class="home-product-item__name">Sữa Tắm OLAY B3+ Vtamin C Siêu Dưỡng Trắng Da, Cấp Ẩm Và Đàn Hồi Cho Da Chai 500ml Chính Hãng</h4>
                                                 <div class="home-product-item__price">
                                                       <span class="home-product-item__price-old">₫305.000</span>
                                                       <span class="home-product-item__price-new">₫214.000</span>
@@ -310,7 +396,7 @@
                                                     </div>
                                                     <div class="home-product-item__list-select"> 
                                                       <button onclick="increaseQuantity();addToCart()" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
-                                                      <button type="button" class="btn btn-danger" style="font-size: .6rem;">Mua ngay+</button>
+                                                      <button onclick="handleButtonClick(event)" type="button" class="btn btn-danger" style="font-size: .6rem;">Mua ngay+</button>
                                                     </div> 
                                                     
                                                     <!-- nguồn gốc -->
@@ -329,6 +415,44 @@
                                                             <span class="home-product-item__sale-off-label" >GIẢM</span>
                                                       </div>
                                             </div>
+                                            </div>
+                                          </div>
+                                          <div class="product-back">
+                                            <!-- Nội dung mặt sau của card -->
+                                            <div class="product-card">
+                                              <div class="product-image">
+                                                <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lm2w1hud7g0v62" alt="">
+                                                <h5 class="product-title">Sữa Tắm OLAY B3</h5>
+                                              </div>
+                                              <div class="product-info">
+                                                <p class="product-description">Sữa tắm OLAY B3 giúp làm sạch da và mang lại cảm giác mềm mịn sau mỗi lần sử dụng.</p>
+                                                <div class="product-details">
+                                                  <div class="product-section">
+                                                    <h6 class="product-section-heading">Thành phần:</h6>
+                                                    <ul class="product-ingredient-list">
+                                                      <li><em>Water</em></li>
+                                                      <li><em>Sodium Laureth Sulfate</em></li>
+                                                      <li><em>Glycerin</em></li>
+                                                      <li><em>Cocamidopropyl Betaine</em></li>
+                                                      <li><em>Fragrance</em></li>
+                                                      <li><em>... (các thành phần khác)</em></li>
+                                                    </ul>
+                                                  </div>
+                                                  <div class="product-section">
+                                                    <h6 class="product-section-heading">Công dụng:</h6>
+                                                    <ul class="product-benefit-list">
+                                                      <li><em>Làm sạch da</em></li>
+                                                      <li><em>Mang lại cảm giác mềm mịn</em></li>
+                                                    </ul>
+                                                  </div>
+                                                  <div class="product-section">
+                                                    <h6 class="product-section-heading">Phù hợp với loại da:</h6>
+                                                    <p class="product-skin-type">Phù hợp với mọi loại da</p>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
                                         </a>
                                         
       
@@ -337,11 +461,15 @@
                             </div>
                             <!-- Items 1 -->
                             <div class="grid__column-2-4">
-                              <!-- phần sản phẩm item card -->
-                                        <a class="home-product-item">
+                              
+                              
+                                        <a class="home-product-item" onclick="flipCard(this)">
+                                          <div class="product-front">
+                                            <!-- Nội dung mặt trước của card -->
                                             <div class="home-product-item__img" style="background-image: url();">
                                               <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lm9ral3l2wgv25" alt="" />
-                                                      <h4 class="home-product-item__name">Kem Dưỡng Ban Đêm Phục Hồi & Ngăn Ngừa 7 Dấu Hiệu Lão Hóa OLAY TOTAL EFFECTS 50G</h4>
+                                              <div class="titles">        
+                                              <h4 class="home-product-item__name">Kem Dưỡng Ban Đêm Phục Hồi & Ngăn Ngừa 7 Dấu Hiệu Lão Hóa OLAY TOTAL EFFECTS 50G</h4>
                                                 <div class="home-product-item__price">
                                                       <span class="home-product-item__price-old">₫329.000</span>
                                                       <span class="home-product-item__price-new">₫285.000</span>
@@ -363,7 +491,7 @@
                                                     </div>
                                                     <div class="home-product-item__list-select"> 
                                                       <button onclick="increaseQuantity();addToCart()" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
-                                                      <button type="button" class="btn btn-danger" style="font-size: .6rem;">Mua ngay+</button>
+                                                      <button onclick="handleButtonClick(event)" type="button" class="btn btn-danger" style="font-size: .6rem;">Mua ngay+</button>
                                                     </div> 
                                                     
                                                     <!-- nguồn gốc -->
@@ -382,229 +510,58 @@
                                                             <span class="home-product-item__sale-off-label" >GIẢM</span>
                                                       </div>
                                             </div>
-                                        </a>
-                                        
-      
-                            
-      
-                            </div>
-                            <!-- Items 1 -->
-                            <div class="grid__column-2-4">
-                              <!-- phần sản phẩm item card -->
-                                        <a class="home-product-item">
-                                            <div class="home-product-item__img" style="background-image: url();">
-                                              <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lm9rgf51ilen62" alt="">
-                                                      <h4 class="home-product-item__name">Kem Dưỡng Ẩm Ban Đêm Thúc Đẩy Tái Tạo Da & Mờ Nếp Nhăn OLAY REGENERIST Chiết Xuất RETINOL24 50G</h4>
-                                                <div class="home-product-item__price">
-                                                      <span class="home-product-item__price-old">₫549.000</span>
-                                                      <span class="home-product-item__price-new">₫385.000</span>
-                                                </div>  
-                                                <!-- thả tym ngôi sao -->
-                                                  <div class="home-product-item__action">
-                                                          <span class="home-product-item__like home-product-item__liked">
-                                                            <!-- <i class="home-product-item__like-icon-no fa-regular fa-heart" style="color: #414244;"></i> -->
-                                                            <i class="home-product-item__like-icon fa-solid fa-heart" style="color: #f00000;"></i>
-                                                          </span>     
-                                                            <div class="home-product-item__rating">
-                                                              <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                                                              <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                                                              <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                                                              <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                                                              <i class="fa-regular fa-star-half-stroke" style="color:#ffc800;"></i>
-                                                            </div>
-                                                            <span class="home-product-item__sold">Đã bán 4.5k</span>
-                                                    </div>
-                                                    <div class="home-product-item__list-select"> 
-                                                      <button onclick="increaseQuantity();addToCart()" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
-                                                      <button type="button" class="btn btn-danger" style="font-size: .6rem;">Mua ngay+</button>
-                                                    </div> 
-                                                    
-                                                    <!-- nguồn gốc -->
-                                                    <div class="home-product-item__origin">
-                                                          <span class="home-product-item__brand" >Whoo</span>
-                                                          <span class="home-product-item__origin-name" > America</span>
-                                                    </div>
-                                                      <!-- ____yêu thích giảm giá -->
-                                                      <div class="home-product-item__favourite">
-                                                        <i class="fa-solid fa-check" style="color: #ffffff;"></i>
-                                                        Yêu Thích
-                                          
-                                                      </div>
-                                                      <div class="home-product-item__sale-off">
-                                                            <span class="home-product-item__sale-off-percent" >30%</span>
-                                                            <span class="home-product-item__sale-off-label" >GIẢM</span>
-                                                      </div>
                                             </div>
-                                        </a>
-                                        
-      
-                            
-      
-                            </div>
-                            <!-- Items 1 -->
-                            <div class="grid__column-2-4">
-                              <!-- phần sản phẩm item card -->
-                                        <a class="home-product-item">
-                                            <div class="home-product-item__img" style="background-image: url();">
-                                              <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lm9ral3kxa73fd" alt="">
-                                                      <h4 class="home-product-item__name">Kem Dưỡng Ban Ngày Phục Hồi & Ngăn Ngừa 7 Dấu Hiệu Lão Hóa SPF 15 OLAY TOTAL EFFECTS 50G</h4>
-                                                <div class="home-product-item__price">
-                                                      <span class="home-product-item__price-old">₫329.000
-                                                      </span>
-                                                      <span class="home-product-item__price-new">₫285.000</span>
-                                                </div>  
-                                                <!-- thả tym ngôi sao -->
-                                                  <div class="home-product-item__action">
-                                                          <span class="home-product-item__like home-product-item__liked">
-                                                            <!-- <i class="home-product-item__like-icon-no fa-regular fa-heart" style="color: #414244;"></i> -->
-                                                            <i class="home-product-item__like-icon fa-solid fa-heart" style="color: #f00000;"></i>
-                                                          </span>     
-                                                            <div class="home-product-item__rating">
-                                                              <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                                                              <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                                                              <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                                                              <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                                                              <i class="fa-regular fa-star-half-stroke" style="color:#ffc800;"></i>
-                                                            </div>
-                                                            <span class="home-product-item__sold">Đã bán 4.5k</span>
-                                                    </div>
-                                                    <div class="home-product-item__list-select"> 
-                                                      <button onclick="increaseQuantity();addToCart()" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
-                                                      <button type="button" class="btn btn-danger" style="font-size: .6rem;">Mua ngay+</button>
-                                                    </div> 
-                                                    
-                                                    <!-- nguồn gốc -->
-                                                    <div class="home-product-item__origin">
-                                                          <span class="home-product-item__brand" >Whoo</span>
-                                                          <span class="home-product-item__origin-name" > America</span>
-                                                    </div>
-                                                      <!-- ____yêu thích giảm giá -->
-                                                      <div class="home-product-item__favourite">
-                                                        <i class="fa-solid fa-check" style="color: #ffffff;"></i>
-                                                        Yêu Thích
-                                          
-                                                      </div>
-                                                      <div class="home-product-item__sale-off">
-                                                            <span class="home-product-item__sale-off-percent" >13%</span>
-                                                            <span class="home-product-item__sale-off-label" >GIẢM</span>
-                                                      </div>
+                                          </div>
+                                          <div class="product-back">
+                                            <!-- Nội dung mặt sau của card -->
+                                            <div class="product-card">
+                                              <div class="product-image">
+                                              <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lm9ral3l2wgv25" alt="" />
+                                                <h5 class="product-title">Kem Dưỡng Ban Đêm Phục Hồi</h5>
+                                              </div>
+                                              <div class="product-info">
+                                                <p class="product-description">Kem dưỡng ban đêm phục hồi giúp tái tạo da trong suốt quá trình ngủ, mang lại làn da mềm mịn và tươi trẻ.</p>
+                                                <div class="product-details">
+                                                  <div class="product-section">
+                                                    <h6 class="product-section-heading">Thành phần:</h6>
+                                                    <ul class="product-ingredient-list">
+                                                      <li><em>Water</em></li>
+                                                      <li><em>Glycerin</em></li>
+                                                      <li><em>Retinol</em></li>
+                                                      <li><em>Hydrolyzed Collagen</em></li>
+                                                      <li><em>Shea Butter</em></li>
+                                                    </ul>
+                                                  </div>
+                                                  <div class="product-section">
+                                                    <h6 class="product-section-heading">Công dụng:</h6>
+                                                    <ul class="product-benefit-list">
+                                                      <li><em>Tái tạo da</em></li>
+                                                      <li><em>Mang lại làn da mềm mịn</em></li>
+                                                      <li><em>Tăng độ đàn hồi </em></li>
+                                                      <li><em>Phục hồi và làm dịu da</em></li>
+                                                    </ul>
+                                                  </div>
+                                                  <div class="product-section">
+                                                    <h6 class="product-section-heading">Phù hợp với loại da:</h6>
+                                                    <p class="product-skin-type">Phù hợp với mọi loại da</p>
+                                                  </div>
+                                                </div>
+                                              </div>
                                             </div>
+                                          </div>
                                         </a>
-                                        
-      
+
+                            </div>
                             
-      
-                            </div>
-                            <!-- Items 1 -->
-                            <div class="grid__column-2-4">
-                              <!-- phần sản phẩm item card -->
-                                        <a class="home-product-item">
-                                            <div class="home-product-item__img" style="background-image: url();">
-                                              <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-ljahn1337kr6af" alt="">
-                                                      <h4 class="home-product-item__name">Sữa Dưỡng Thể Olay B3 Bright Ultra Whitening dưỡng trắng , dưỡng ẩm toàn thân , bản cải tiến mới nhất / Subeo Beauty</h4>
-                                                <div class="home-product-item__price">
-                                                      <span class="home-product-item__price-old">₫145.000</span>
-                                                      <span class="home-product-item__price-new">₫100.000</span>
-                                                </div>  
-                                                <!-- thả tym ngôi sao -->
-                                                  <div class="home-product-item__action">
-                                                          <span class="home-product-item__like home-product-item__liked">
-                                                            <!-- <i class="home-product-item__like-icon-no fa-regular fa-heart" style="color: #414244;"></i> -->
-                                                            <i class="home-product-item__like-icon fa-solid fa-heart" style="color: #f00000;"></i>
-                                                          </span>     
-                                                            <div class="home-product-item__rating">
-                                                              <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                                                              <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                                                              <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                                                              <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                                                              <i class="fa-regular fa-star-half-stroke" style="color:#ffc800;"></i>
-                                                            </div>
-                                                            <span class="home-product-item__sold">476
-                                                              Đã Bán</span>
-                                                    </div>
-                                                    <div class="home-product-item__list-select"> 
-                                                      <button onclick="increaseQuantity();addToCart()" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
-                                                      <button type="button" class="btn btn-danger" style="font-size: .6rem;">Mua ngay+</button>
-                                                    </div> 
-                                                    
-                                                    <!-- nguồn gốc -->
-                                                    <div class="home-product-item__origin">
-                                                          <span class="home-product-item__brand" >Whoo</span>
-                                                          <span class="home-product-item__origin-name" > America</span>
-                                                    </div>
-                                                      <!-- ____yêu thích giảm giá -->
-                                                      <div class="home-product-item__favourite">
-                                                        <i class="fa-solid fa-check" style="color: #ffffff;"></i>
-                                                        Yêu Thích
-                                          
-                                                      </div>
-                                                      <div class="home-product-item__sale-off">
-                                                            <span class="home-product-item__sale-off-percent" >10%</span>
-                                                            <span class="home-product-item__sale-off-label" >GIẢM</span>
-                                                      </div>
-                                            </div>
-                                        </a>
-                                        
-      
-                            
-      
-                            </div>
-                            <!-- Items 1 -->
-                            <div class="grid__column-2-4">
-                              <!-- phần sản phẩm item card -->
-                                        <a class="home-product-item">
-                                            <div class="home-product-item__img" style="background-image: url();">
-                                              <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lkul035qy37k7c" alt="">
-                                                      <h4 class="home-product-item__name">[HÀNG THÁI LAN] Sữa Tắm Olay B3 Nội Địa Thái Retinol/Peptide/Vitamin C Dưỡng Ẩm Sáng, Trắng Da Chống Lão Hóa</h4>
-                                                <div class="home-product-item__price">
-                                                      <span class="home-product-item__price-old">₫260.000
-                                                      </span>
-                                                      <span class="home-product-item__price-new">₫240.000</span>
-                                                </div>  
-                                                <!-- thả tym ngôi sao -->
-                                                  <div class="home-product-item__action">
-                                                          <span class="home-product-item__like home-product-item__liked">
-                                                            <!-- <i class="home-product-item__like-icon-no fa-regular fa-heart" style="color: #414244;"></i> -->
-                                                            <i class="home-product-item__like-icon fa-solid fa-heart" style="color: #f00000;"></i>
-                                                          </span>     
-                                                            <div class="home-product-item__rating">
-                                                              <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                                                              <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                                                              <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                                                              <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                                                              <i class="fa-regular fa-star-half-stroke" style="color:#ffc800;"></i>
-                                                            </div>
-                                                            <span class="home-product-item__sold">Đã bán 4.5k</span>
-                                                    </div>
-                                                    <div class="home-product-item__list-select"> 
-                                                      <button onclick="increaseQuantity();addToCart()" type="button" class="btn btn-danger" style="font-size: .7rem; background-color:rgb(253,243,244);color: red;">Thêm giỏ hàng </button>
-                                                      <button type="button" class="btn btn-danger" style="font-size: .6rem;">Mua ngay+</button>
-                                                    </div> 
-                                                    
-                                                    <!-- nguồn gốc -->
-                                                    <div class="home-product-item__origin">
-                                                          <span class="home-product-item__brand" >Whoo</span>
-                                                          <span class="home-product-item__origin-name" > America</span>
-                                                    </div>
-                                                      <!-- ____yêu thích giảm giá -->
-                                                      <div class="home-product-item__favourite">
-                                                        <i class="fa-solid fa-check" style="color: #ffffff;"></i>
-                                                        Yêu Thích
-                                          
-                                                      </div>
-                                                      <div class="home-product-item__sale-off">
-                                                            <span class="home-product-item__sale-off-percent" >8%</span>
-                                                            <span class="home-product-item__sale-off-label" >GIẢM</span>
-                                                      </div>
-                                            </div>
-                                        </a>                
-                            </div>
                   </div>
+                  
             </div>
         </div>    
           </div>
       </div>
   </div>
+  <div id="info"></div>
+
 <!-- --------------------------------------------------------------TP -->
 
         <div class="vitamin">      <!-- <div class="info">
@@ -703,6 +660,7 @@
   <script src="./header.js"></script>
   <script src="./main.js"> </script>
   <script src="./cart.js"></script>
+  <script src="./info.js"></script>
   <script src="../Login/login.js"></script>
   <script src="./footer.js"></script>
   <script>

@@ -50,8 +50,12 @@ function removeFromCart(event) {
   decreaseQuantity(); // Giảm số lượng sản phẩm trong giỏ hàng
   tinh(); // Cập nhật giỏ hàng sau khi xóa sản phẩm
 }
-
+function handleButtonClick(event) {
+  event.stopPropagation();
+  // Xử lý hành động khi nhấp vào nút trong card
+}
 function addToCart() {
+  event.stopPropagation();
   var productCard = event.target.closest('.home-product-item');
   var homeproductitemimg = productCard.querySelector('.home-product-item__img img');
   var imageUrl = homeproductitemimg.src;
